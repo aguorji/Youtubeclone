@@ -1,0 +1,42 @@
+
+.main-contents{
+  position: relative;
+  left: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  }
+
+
+  .searched-histories-container{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 40px;
+    left: 280px;
+    right: 0;
+    height: 70px;
+    white-space: nowrap;
+    background-color: white;
+    margin-top: 20px;
+    
+  }
+
+  .searched-histories{
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: rgb(229, 229, 229);
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+  }
+
+  .main-menu{
+    flex: 1;
+    
+  }

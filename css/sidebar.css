@@ -1,0 +1,120 @@
+/*Begining of the side bars*/
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 65px); /* Ensures proper height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto; /* Enables scrolling when needed */
+  scrollbar-width: thin; /* Reduces scrollbar width */
+  scrollbar-color: #888 #f1f1f1; /* Thumb and track color */
+  background-color: white;
+  z-index: 5;
+}
+
+/* Adding scrollbar styles */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Scrollbar track */
+}
+
+
+
+
+.nav-links{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgb(226, 223, 223);
+  padding: 12px;
+}
+
+.nav-container{
+  height: 40px;
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+
+}
+
+.nav-container:active{
+  background-color: rgb(232, 231, 229);
+}
+
+
+.nav-container:hover{
+  background-color: rgb(246, 244, 244);
+}
+
+.nav-content{
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 20px;  
+  
+
+}
+
+
+
+.tooltip{
+  position: absolute;
+  bottom: -20px;
+  left: 90px;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid black;
+  padding: 4px 8px;
+  white-space: nowrap;
+  /*visibility: hidden;*/
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+.nav-container:hover .tooltip{
+  
+  /*visibility: visible;*/
+  opacity: 1;
+  transition-delay: 0s; /* Removes the delay on hover */   
+}
+
+
+.sidebar-icon-sizes{
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+}
+
+.side-footer{
+  padding: 10px;
+}
+
+.foot-paragraph{
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(38, 38, 38);
+  word-spacing: 4px;
+  
+}
+
+.sidebar-footer{
+  font-size: 12px;
+  font-weight: 400;
+  color: grey;
+}
