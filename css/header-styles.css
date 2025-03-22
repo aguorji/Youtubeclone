@@ -11,16 +11,19 @@
   left: 0;
   right: 0;
   background-color: white;
+  margin-top: 10px;
   z-index: 1000;
+  
 
 }
 
 /*Left Secttion*/
 
 .left-section{
-  width: 180px;
+  width: 180;
   height: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   
@@ -32,9 +35,7 @@
   justify-content: center;  
   width: 40px;
   margin: 0 15px;
-  cursor: pointer;
-  
-  
+  cursor: pointer;  
   
 }
 
@@ -48,7 +49,7 @@
 }
 
 .youtube-logo{
-  flex: 1;
+  width: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +58,7 @@
 }
 
 .youtube-icon{
-   width: 100%;
+   width: 80%;
 }
 
 .country-code{
@@ -65,7 +66,6 @@
   right: -30px;
   top: -10px;
   font-size: 0.8em;
-  
    
 }
 
@@ -90,6 +90,7 @@
   border: 2px solid rgb(228, 223, 223);
   border-radius: 20px;
   overflow: hidden;
+  min-width: 110px;
   
    
 }
@@ -231,26 +232,40 @@
   margin-right: 30px;
 }
 
-
-.notification-section .tooltips,
-.voice-search-part .tooltips {
+/* Common styles for all tooltips */
+.tooltips {
   position: absolute;
-  bottom: -42px;
   background-color: grey;
   color: white;
-  padding: 8px ;
+  padding: 8px;
   white-space: nowrap;
-  pointer-events:none;
+  pointer-events: none;
   font-size: 12px;
   font-weight: 400;
-  border-radius:4px;
-  opacity: 0;  
+  border-radius: 4px;
+  opacity: 0;
+}
+
+/* Adjust positioning */
+.notification-section .tooltips,
+.voice-search-part .tooltips {
+  bottom: -42px;
+}
+
+/* Different styles for YouTube logo tooltip */
+.youtube-logo .tooltips {
+  bottom: -26px;
+  right: -20px;
+  background-color: rgb(236, 234, 234);
+  color: rgb(15, 15, 15);
 }
 
 
 
+
 .notification-section:hover .tooltips,
-.voice-search-part:hover .tooltips{
+.voice-search-part:hover .tooltips,
+.youtube-logo:hover .tooltips{
   opacity: 1;
   transition: opacity 0.15s;
 
