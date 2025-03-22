@@ -1,0 +1,164 @@
+/* 1. Mobile Phones (Portrait & Landscape) - max-width: 767px */
+@media screen and (max-width: 767px) {
+  /* Styles for all mobile phones */
+
+  
+  .video-container, .video-container-main {
+    grid-template-columns: repeat(2, 1fr); /* 2 Column*/
+    
+  }
+
+  /*ADJUSTING THE SHORT VIDEOS SIZES*/
+
+  .short-videos-contents img{        
+    height: 480px;   
+  }
+
+
+  
+  .shorts-videos{    
+    /* Adjusting the resolution of the short videos*/
+
+    grid-template-columns: repeat(3, 1fr);    
+  
+  }
+
+ /* Hide extra divs */
+  .video-container div:nth-child(n+3),
+  .shorts-videos div:nth-child(n + 4) {
+    display: none;  
+    
+  }
+}
+
+/* 2. Tablets (Portrait) - min-width: 768px and max-width: 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets in portrait */
+
+  
+  .video-container, .video-container-main {
+    grid-template-columns: repeat(2, 1fr); /* 2 Column*/
+    
+  }
+
+  /*ADJUSTING THE SHORT VIDEOS SIZES*/
+
+  .short-videos-contents img{        
+    height: 480px;   
+  }
+
+
+  
+  .shorts-videos{    
+    /* Adjusting the resolution of the short videos*/
+
+    grid-template-columns: repeat(3, 1fr);    
+  
+  }
+
+ /* Hide extra divs */
+  .video-container div:nth-child(n+3),
+  .shorts-videos div:nth-child(n + 4) {
+    display: none;  
+    
+  }
+
+  
+}
+
+/* 3. Tablets (Landscape) & Small Laptops - min-width: 1025px and max-width: 1280px */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  /* Styles for tablets in landscape and small laptops */
+
+
+  .video-container, .video-container-main {
+    grid-template-columns: repeat(2, 1fr); /* 2 Column*/
+    
+  }
+
+  
+  .shorts-videos{    
+    /* Adjusting the resolution of the short videos*/
+
+    grid-template-columns: repeat(3, 1fr);    
+  
+  }
+
+
+  /*ADJUSTING THE SHORT VIDEOS SIZES*/
+
+  .short-videos-contents img{        
+    height: 500px;   
+  }
+
+
+
+ /* Hide extra divs */
+  .video-container div:nth-child(n+3),
+  .shorts-videos div:nth-child(n + 4) {
+    display: none;  
+    
+  }
+}
+
+/* 4. Laptops (Small to Medium) - min-width: 1281px and max-width: 1440px */
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  /* Styles for standard laptops */
+  .video-container, .video-container-main {
+    grid-template-columns: repeat(2, 1fr); /* 2 Column*/
+    
+  }
+
+  
+  .shorts-videos{    
+    /* Adjusting the resolution of the short videos*/
+
+    grid-template-columns: repeat(4, 1fr);    
+  
+  }
+
+  /*ADJUSTING THE SHORT VIDEOS SIZES*/
+
+  .short-videos-contents img{        
+    height: 440px;   
+  }
+
+
+
+ /* Hide extra divs */
+  .video-container div:nth-child(n+3),
+  .shorts-videos div:nth-child(n + 5) {
+    display: none;  
+    
+  }
+
+
+   
+
+}
+
+/* 5. Large Laptops & Desktops - min-width: 1441px */
+@media screen and (min-width: 1441px) {
+  .video-container, .video-container-main {
+    grid-template-columns: repeat(3, 1fr);
+  
+  }
+
+ 
+  .shorts-videos{    
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+
+    grid-template-columns: repeat(5, 1fr);    
+  
+  }
+
+  /*ADJUSTING THE SHORT VIDEOS SIZES*/
+
+  .short-videos-contents img{        
+    height: 420px;   
+  }
+
+
+
+}
+
