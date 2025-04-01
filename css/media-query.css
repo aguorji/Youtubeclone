@@ -1,10 +1,11 @@
 /* 1. Mobile Phones (Portrait & Landscape) - max-width: 767px */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 680px) {
   /* Styles for all mobile phones */
 
   
+  
   .video-container, .video-container-main {
-    grid-template-columns: repeat(2, 1fr); /* 2 Column*/
+    grid-template-columns: 1fr; /* 1 Column*/
     
   }
 
@@ -19,20 +20,54 @@
   .shorts-videos{    
     /* Adjusting the resolution of the short videos*/
 
-    grid-template-columns: repeat(3, 1fr);    
+    grid-template-columns: repeat(2, 1fr);    
   
   }
 
  /* Hide extra divs */
-  .video-container div:nth-child(n+3),
-  .shorts-videos div:nth-child(n + 4) {
+  .video-container div:nth-child(n+2),
+  .shorts-videos div:nth-child(n + 3) {
     display: none;  
     
   }
+
+  
+ /*ADJUSTING THE SIDE BARS*/
+
+ .sidebar{
+  /*FOR SIDEBAR SIZES*/
+  display: none;
+ 
+}
+
+
+
+/*For Main Contents*/
+.main-contents{
+  left: 0;
+  width: 100vw;
+  padding: 0 40px;
+
+  
+
+}
+
+.searched-histories-container{
+  left: 0;
+  right: 0;
+  padding: 5px 40px;
+  width: 100vw; 
+}  
+ /*
+.shorts-video-container{
+  padding: 0 ;
+}
+  */
+
 }
 
 /* 2. Tablets (Portrait) - min-width: 768px and max-width: 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 681px) and (max-width: 1075px) {
   /* Styles for tablets in portrait */
 
   
@@ -64,10 +99,101 @@
   }
 
   
+ /*ADJUSTING THE SIDE BARS*/
+
+ .sidebar{
+  /*FOR SIDEBAR SIZES*/
+  height: 100vh; /* Ensure it fits within the viewport */
+  width: 110px;
+ scrollbar-width: none; /* Hide scrollbar in Firefox */
+ 
+ 
+}
+
+.sidebar:hover{
+  overflow-y:hidden; /* disabling scroll */
+
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari */
+}
+.nav-links1{
+  visibility: hidden;
+
+}
+
+.nav-links{
+  width: 90%; 
+  margin: 0;
+  padding: 0;
+
+}
+
+.icon-sizes{
+  margin-top: 10px;
+  padding: 0;
+
+
+
+}
+.nav-container{
+  flex-direction: column;
+  height: 80px;
+  width: 80%; 
+  
+}
+
+.nav-content{
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 4px;
+
+  
+}
+
+.nav-container:nth-of-type(4) {
+  display:inherit; /* or inline-flex if needed */
+}
+
+
+.tooltip{
+  bottom: -12px;
+  left: 22px;
+  font-size: 10px;
+
+}
+
+
+
+
+
+/*For Main Contents*/
+.main-contents{
+  left: 100px;
+  right: 0;
+  width: calc(100vw - 120px);
+  padding: 0 20px;
+  
+
+}
+
+.searched-histories-container{
+
+  left: 110px;
+  right: 0;
+  width: 100%;
+  padding: 5px 15px;
+  
+}  
+
+
+  
 }
 
 /* 3. Tablets (Landscape) & Small Laptops - min-width: 1025px and max-width: 1280px */
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 1076px) and (max-width: 1154px) {
   /* Styles for tablets in landscape and small laptops */
 
 
@@ -92,20 +218,110 @@
   }
 
 
-
  /* Hide extra divs */
   .video-container div:nth-child(n+3),
   .shorts-videos div:nth-child(n + 4) {
     display: none;  
     
   }
+
+  
+ /*ADJUSTING THE SIDE BARS*/
+
+ .sidebar{
+  /*FOR SIDEBAR SIZES*/
+  height: 100vh; /* Ensure it fits within the viewport */
+  width: 110px;
+ scrollbar-width: none; /* Hide scrollbar in Firefox */
+ 
+ 
+}
+
+.sidebar:hover{
+  overflow-y:hidden; /* disabling scroll */
+
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari */
+}
+.nav-links1{
+  visibility: hidden;
+
+}
+
+.nav-links{
+  width: 90%; 
+  margin: 0;
+  padding: 0;
+
+}
+
+.icon-sizes{
+  margin-top: 10px;
+  padding: 0;
+
+
+
+}
+.nav-container{
+  flex-direction: column;
+  height: 80px;
+  width: 80%; 
+  
+}
+
+.nav-content{
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 4px;
+
+  
+}
+
+.nav-container:nth-of-type(4) {
+  display:inherit; /* or inline-flex if needed */
+}
+
+
+.tooltip{
+  bottom: -12px;
+  left: 22px;
+  font-size: 10px;
+
+}
+
+
+
+
+
+/*For Main Contents*/
+.main-contents{
+  left: 100px;
+  right: 0;
+  width: calc(100vw - 120px);
+  padding: 0 20px;
+  
+
+}
+
+.searched-histories-container{
+
+  left: 110px;
+  right: 0;
+  width: 100%;
+  padding: 5px 15px;
+  
+}  
+
 }
 
 /* 4. Laptops (Small to Medium) - min-width: 1281px and max-width: 1440px */
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
+@media screen and (min-width: 1155px) and (max-width: 1300px) {
   /* Styles for standard laptops */
   .video-container, .video-container-main {
-    grid-template-columns: repeat(2, 1fr); /* 2 Column*/
+    grid-template-columns: repeat(3, 1fr); /* 2 Column*/
     
   }
 
@@ -126,11 +342,101 @@
 
 
  /* Hide extra divs */
-  .video-container div:nth-child(n+3),
+  .video-container div:nth-child(n+4),
   .shorts-videos div:nth-child(n + 5) {
-    display: none;  
+    display: none; 
     
   }
+
+ /*ADJUSTING THE SIDE BARS*/
+
+  .sidebar{
+      /*FOR SIDEBAR SIZES*/
+      height: 100vh; /* Ensure it fits within the viewport */
+      width: 110px;
+     scrollbar-width: none; /* Hide scrollbar in Firefox */
+     
+     
+    }
+
+    .sidebar:hover{
+      overflow-y:hidden; /* disabling scroll */
+    
+    }
+
+    .sidebar::-webkit-scrollbar {
+      display: none; /* Hide scrollbar in Chrome, Safari */
+    }
+    .nav-links1{
+      visibility: hidden;
+    
+    }
+
+    .nav-links{
+      width: 90%; 
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .icon-sizes{
+      margin-top: 10px;
+      padding: 0;
+
+
+
+    }
+    .nav-container{
+      flex-direction: column;
+      height: 80px;
+      width: 80%; 
+      
+    }
+
+    .nav-content{
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 400;
+      margin-left: 4px;
+
+      
+    }
+
+    .nav-container:nth-of-type(4) {
+      display:inherit; /* or inline-flex if needed */
+  }
+
+    
+    .tooltip{
+      bottom: -12px;
+      left: 22px;
+      font-size: 10px;
+
+    }
+
+
+
+    
+
+    /*For Main Contents*/
+    .main-contents{
+      left: 100px;
+      right: 0;
+      width: calc(100vw - 120px);
+      padding: 0 20px;
+      
+
+    }
+
+    .searched-histories-container{
+
+      left: 110px;
+      right: 0;
+      width: 100%;
+      padding: 5px 15px;
+      
+    }  
+  
 
 
    
@@ -138,7 +444,7 @@
 }
 
 /* 5. Large Laptops & Desktops - min-width: 1441px */
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1301px) {
   .video-container, .video-container-main {
     grid-template-columns: repeat(3, 1fr);
   
@@ -157,6 +463,7 @@
   .short-videos-contents img{        
     height: 420px;   
   }
+
 
 
 

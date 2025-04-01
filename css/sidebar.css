@@ -1,23 +1,27 @@
 /*Begining of the side bars*/
 .sidebar {
   position: fixed;
-  top: 60px;
+  top: 80px;
   left: 0;
-  width: 250px;
-  height: calc(100vh - 65px); /* Ensures proper height */
+  width: 240px;
+  height: calc(100vh - 80px); /* Ensures proper height */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow-y: auto; /* Enables scrolling when needed */
   scrollbar-width: thin; /* Reduces scrollbar width */
   scrollbar-color: #888 #f1f1f1; /* Thumb and track color */
   background-color: white;
   z-index: 5;
 }
+.sidebar:hover{
+  overflow-y: scroll; /* Enables scrolling when needed */
+
+}
 
 /* Adding scrollbar styles */
 .sidebar::-webkit-scrollbar {
   width: 6px;
+  
 }
 
 .sidebar::-webkit-scrollbar-thumb {
@@ -32,10 +36,13 @@
 
 
 
-.nav-links{
+.nav-links,
+.nav-links1{
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-bottom: 1px solid rgb(226, 223, 223);
   padding: 12px;
 }
@@ -43,14 +50,16 @@
 .nav-container{
   height: 40px;
   width: 100%;  
-  display: flex;
   align-items: center;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
+  color: black;
   position: relative;
-
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 .nav-container:active{
@@ -63,12 +72,18 @@
 }
 
 .nav-content{
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   margin-left: 20px;  
   
 
 }
+
+
+.nav-container:nth-of-type(4) {
+  display: none;
+}
+
 
 
 
