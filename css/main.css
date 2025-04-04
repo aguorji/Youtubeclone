@@ -86,8 +86,9 @@
 
   /*Thumbnail photos*/
 
-  .thumbnail-pictures{
+  .thumbnail-videos{
     width: 100%;
+    height: 70%;
     flex: 1;
     border-radius: 10px;
 
@@ -96,7 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 38%;
+    height: 30%;
     padding: 10px;
 
 
@@ -181,7 +182,7 @@
   }
 
   
-  .short-videos-contents img{
+  .short-videos-contents video{
     border-radius: 10px;
     width: 100%;
     margin-bottom: 10px;
