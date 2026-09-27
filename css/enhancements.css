@@ -1,0 +1,73 @@
+/* Interactive features: sidebar toggle, search results, active chips */
+
+.menu-icon {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.menu-icon:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+/* Desktop: collapse the sidebar and let the videos use the full width */
+body.sidebar-collapsed .sidebar {
+  display: none;
+}
+
+body.sidebar-collapsed .main-contents {
+  left: 0;
+  width: 100vw;
+  padding: 0 40px;
+}
+
+body.sidebar-collapsed .searched-histories-container {
+  left: 0;
+  padding-left: 40px;
+}
+
+/* Phones & tablets: open the sidebar as an overlay */
+@media screen and (max-width: 680px) {
+  body.sidebar-open .sidebar {
+    display: flex;
+    width: 240px;
+    overflow-y: auto;
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+  }
+
+  body.sidebar-open::after {
+    content: "";
+    position: fixed;
+    inset: 80px 0 0 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 15;
+  }
+}
+
+/* Category chips */
+.searched-histories.active {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+/* Search */
+body.searching .shorts-video-container {
+  display: none;
+}
+
+.search-hidden {
+  display: none !important;
+}
+
+.no-results {
+  position: relative;
+  top: 120px;
+  text-align: center;
+  font-size: 18px;
+  color: #606060;
+  padding: 40px 16px;
+}
+
+.search-button {
+  cursor: pointer;
+}
